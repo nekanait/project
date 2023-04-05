@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in posts %}
+ <div class=" col-md-4">
+    <div class="latest">
+        <img class="posts__img" src="{{ url_for('static', filename='images/' + post.image) }}" alt="img">
+       <div class="nostrud">
+          <h3><a href='http://127.0.0.1:5000/{{post.id}}'>{{post.title}}</a></h3>
+          <p>{{ post.description }}</p>
+          <p><a href="http://127.0.0.1:5000/profile/{{post.author_id}}">{{ post.author.name }}</a></p>
+          <span>{{post.date}}</span>
+          <a class="read_more" href="http://127.0.0.1:5000/{{post.id}}">Read More</a>
+       </div>
+    </div>
+ </div>
+{%endfor%}
+{% endblock %}

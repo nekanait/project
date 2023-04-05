@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>School's News</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file -->
+        <link rel="stylesheet" href="/static/css/production.css">
+
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Playfair+Display:900" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+    </head>
+
+    <body>
+
+
+    <div class="grid-row">
+
+                <!-- Header -->
+        <header class="header full-width">
+
+            <!-- Mobile header -->
+            <div class="show-on-mobile pt1 pl2 pr2 mb1">
+                <div class="border--bottom pt1">
+                    <div class="grid-row grid-row--center pb1">
+                        <div class="grid-column span-half">
+                            <!-- Mobile logo -->
+                            <div class="mb0"><img class="logo--mobile" src="/static/img/mobile-logo.svg" alt="School's News" title="School's News"></div>
+                        </div>
+                        <div class="grid-column span-half align--right">
+                            <!-- Mobile social links -->
+                            <ul class="mobile-social-links list--inline">
+                                <li class="mr1"><a class="link link--default" href="https://www.twitter.com"><img class="icon" src="/static/img/facebook.svg" alt="Facebook"></a></li>
+                                <li class="mr1"><a class="link link--default" href="https://www.instagram.com"><img class="icon" src="/static/img/instagram.svg" alt="Instagram"></a></li>
+                                <li><a class="link link--default" href="https://www.facebook.com"><img class="icon" src="/static/img/twitter.svg" alt="Twitter"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop header -->
+            <!-- Desktop logo -->
+            <!-- Social links -->
+            <ul class="pt1 no-bullets align--center hide-on-mobile">
+                <li><a class="link link--default" href="https://www.twitter.com"><img class="icon" src="/static/img/facebook.svg" alt="Facebook"></a></li>
+                <li><a class="link link--default" href="https://www.instagram.com"><img class="icon" src="/static/img/instagram.svg" alt="Instagram"></a></li>
+                <li><a class="link link--default" href="https://www.facebook.com"><img class="icon" src="/static/img/twitter.svg" alt="Twitter"></a></li>
+            </ul>
+
+        </header>
+        
+        <!-- Hero image -->
+        <div class="hero-container full-width show-on-mobile pt1 pl2 pr2">
+            <div class="hero full-width full-height" style="background:rgba(109, 11, 11, 0) url(/static/img/8.jpg) no-repeat scroll center center/cover"></div>
+        </div>
+        <div class="hide-on-mobile hero" style="background:rgba(139, 3, 3, 0) url(/static/img/8.jpg) no-repeat scroll center center/cover"></div>
+        
+        <!-- Body -->
+        <div class="body full-width pt1 pr2 pb2 pl2">
+            <!-- Navigation -->
+            <nav class="navigation border--bottom pt1">
+                <ul class="no-bullets list--inline pb1 bold">
+                    <li class="small mr2"><a class="link link--text current" href="http://127.0.0.1:5000">Home</a></li>
+                    <li class="small mr2"><a class="link link--text" href="http://127.0.0.1:5000/register">Registration</a></li>
+                    <li class="small mr2"><a class="link link--text" href="http://127.0.0.1:5000/login">Login</a></li>
+                    <li class="small mr2"><a class="link link--text" href="http://127.0.0.1:5000/create">Create News</a></li>
+                    <li class="small mr2"><a class="link link--text" href="http://127.0.0.1:5000/current_profile">Profile</a></li>
+                </ul>
+            </nav>
+            {% block content %}
+        {% endblock %}
+            <!-- Page Content -->
+            <main class="content pt2 pb2">
+                <h2>Что это</h2>
+                <p>Это школьный новостной портал. Он сделан для того, чтобы ученики могли узнавать самые последние новости нашей школы.</p>
+                <p>Также ученики могут сами создавать посты о новостях.</p>
+            </main>
+                        
+        </div><!-- end Body -->
+
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Post Detail</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F7F7F7;
+        margin: 0;
+        padding: 0;
+      }
+      /* Header Styles */
+      header {
+        background-color: #333;
+        color: #FFF;
+        padding: 10px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      /* Post Styles */
+      .post {
+        background-color: #FFF;
+        border: 1px solid #CCC;
+        margin: 10px;
+        padding: 10px;
+      }
+      .post h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+      .post p {
+        margin: 10px 0;
+      }
+      .post img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Post Detail</h1>
+    </header>
+    <div class="post">
+        <img class="posts__img" src="{{ url_for('static', filename='images/' + post.image) }}">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.description }}</p>
+        <h4>{{ post.nickname }}</h4>
+        <p>{{ post.date }}</p>
+      <li>
+        <a class="link link--text" href = "http://127.0.0.1:5000/{{post.id}}/update" >Update</a>
+        </li>
+        <li>
+            <a class="link link--text" href = "http://127.0.0.1:5000/{{post.id}}/delete" >Delete</a>
+          </li>
+    </div>
+  </body>
+</html>
